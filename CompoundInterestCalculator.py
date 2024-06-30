@@ -23,7 +23,7 @@ while rate <= 0:
         # Print error message if value is <= 0
         if rate <= 0:
             print("Rate can't be less than or equal to zero")
-
+    # Print error message if user gives wrong input
     except ValueError:
         print("Please enter a number")
 
