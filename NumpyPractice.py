@@ -19,7 +19,6 @@ print(my_matrix)
 #   Write a code that creates the following 2x4 numpy array
 #   [[3 7 9 3]
 #   [4 3 2 2]]
-
 my_matrix01 = np.array([[3, 7, 9, 3], [4, 3, 2, 2]])
 print(f"\nMINI CHALLENGE #1:\n{my_matrix01}")
 
@@ -82,3 +81,75 @@ print(squared)
 sqrt = np.sqrt(squared)
 print(sqrt)
 
+# MINI CHALLENGE #3:
+# Given the X and Y values below, obtain the distance between them
+# X = [5, 7, 20]
+# Y = [9, 15, 4]
+print("\nMINI CHALLENGE #3:")
+x = np.array([5, 7, 20])
+y = np.array([9, 15, 4])
+
+distance = np.sqrt(x**2 + y**2)
+print(distance)
+
+
+# TASK #4: PERFORM ARRAYS SLICING AND INDEXING
+print("\n---TASK 4---")
+# Access specific index from the numpy array
+my_np_array = np.array([3, 5, 6, 2, 8, 10, 20, 50])
+print(my_np_array[0], my_np_array[-1])
+
+# Starting from the first index 0 up until and NOT including the last element
+print(my_np_array[0:3])
+print(my_np_array)
+
+# Broadcasting, altering several values in a numpy array at once
+my_np_array[0:4] = 7
+print(my_np_array)
+
+# Get a row from a matrix
+matrix = np.random.randint(1, 11, (4, 4))
+print(matrix[0], matrix[2])
+
+# Get one element from 2D array
+print(matrix[0][2])
+
+# MINI CHALLENGE #4:
+# In the following matrix, replace the last row with 0
+# X = [2 30 20 -2 -4]
+#     [3 4  40 -3 -2]
+#     [-3 4 -6 90 10]
+#     [25 45 34 22 12]
+#     [13 24 22 32 37]
+print("\nMINI CHALLENGE #4:")
+matrix = np.array([[2, 30, 20, -2, -4], [3, 4, 40, -3, -2], [-3, 4, -6, 90, 10], [25, 45, 34, 22, 12], [13, 24, 22, 32, 37]])
+matrix[4] = 0
+print(matrix)
+
+
+# TASK #5: PERFORM ELEMENTS SELECTION (CONDITIONAL)
+print("\n---TASK 5---")
+# Obtain elements from matrix that are greater than a value
+matrix = np.random.randint(1, 11, (5,5))
+print(matrix)
+new_matrix = matrix[matrix > 7]
+print(new_matrix)
+
+# Obtain odd and even elements only
+new_matrix = matrix[matrix % 2 == 1]
+print(new_matrix)
+new_matrix = matrix[matrix % 2 == 0]
+print(new_matrix)
+
+# MINI CHALLENGE #5:
+print("\nMINI CHALLENGE #5:")
+# In the following matrix, replace negative elements by 0 and replace odd elements with -2
+# X = [2 30 20 -2 -4]
+#     [3 4  40 -3 -2]
+#     [-3 4 -6 90 10]
+#     [25 45 34 22 12]
+#     [13 24 22 32 37]
+matrix = np.array([[2, 30, 20, -2, -4], [3, 4, 40, -3, -2], [-3, 4, -6, 90, 10], [25, 45, 34, 22, 12], [13, 24, 22, 32, 37]])
+matrix[matrix < 0] = 0
+matrix[matrix % 2 == 1] = -2
+print(matrix)
