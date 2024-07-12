@@ -61,7 +61,7 @@ print(x)
 # Write a code that takes in a positive integer "x" from the user and
 # creates a 1x10 array with random numbers ranging from 0 to "x"
 print("\nMINI CHALLENGE #2:")
-userInput = int(input("Enter a number above 0: "))
+userInput = int(input("Enter a number greater than 0: "))
 array = np.random.randint(0, userInput, 10)
 print(array)
 
